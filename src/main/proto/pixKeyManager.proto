@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.silva.pix.keymanager";
+option java_outer_classname = "PixKeyManager";
+option objc_class_prefix = "HLW";
+
+package com.silva.pix.keymanager;
+
+service PixKeyManagerService {
+  rpc send (PixKeyManagerRequest) returns (PixKeyManagerReply) {}
+}
+
+message PixKeyManagerRequest {
+  string name = 1;
+}
+
+message PixKeyManagerReply {
+  string message = 1;
+}
